@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow p-4 rounded-4">
+        <h2 class="text-center mb-4 fw-bold">This is Add Page</h2>
+
+        <form action="" method="post">
+          {% csrf_token %}
+
+          <div class="mb-3">
+            <label for="title" class="form-label"><b>Title</b></label>
+            <input type="text" name="Title" id="title" class="form-control" value="{{ datas.Title }}">
+          </div>
+
+          <div class="mb-3">
+            <label for="description" class="form-label"><b>Description</b></label>
+            <input type="text" name="Description" id="description" class="form-control" value="{{ datas.Description }}">
+          </div>
+
+          <div class="mb-3">
+            <label for="due-date" class="form-label"><b>Due Date</b></label>
+            <input type="date" name="Due_date" id="due-date" class="form-control" value="{{ datas.Due_date }}">
+          </div>
+
+          <div class="mb-3">
+            <label for="priority" class="form-label"><b>Priority</b></label>
+            <input type="number" name="priority" id="priority" class="form-control" value="{{ datas.priority }}">
+          </div>
+
+          <div class="mb-3">
+            <label for="status" class="form-label"><b>Status</b></label>
+            <input type="text" name="Status" id="status" class="form-control" value="{{ datas.Status }}">
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100">Save</button>
+        </form>
+
+        <div class="text-center mt-3">
+          <a href="{% url 'home' %}" class="btn btn-outline-secondary btn-sm"><b>Back to Home</b></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}
