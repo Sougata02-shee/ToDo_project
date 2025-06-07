@@ -9,3 +9,12 @@ Includes user authentication, task management with CRUD operations, and is desig
 - Group tasks by **due date** and **completion status**
 - Responsive UI using Bootstrap
 - Role-based authentication & secure 
+
+## Setup Virtual Environment
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+## Apply Migrations & Run Server
+bash
+python manage.py migrate
+python manage.py runserver
