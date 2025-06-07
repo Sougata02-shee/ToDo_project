@@ -15,6 +15,5 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ## Apply Migrations & Run Server
-bash
 python manage.py migrate
 python manage.py runserver
